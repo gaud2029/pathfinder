@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://localhost/pf',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -106,6 +106,12 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+
+        // laravel ide helper
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+
+        // Jeffrey Way's artisan generators
+        'Way\Generators\GeneratorsServiceProvider',
 
 	),
 

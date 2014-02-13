@@ -1,3 +1,8 @@
+/app/private
+.idea
+_ide_helper.php
+test.php
+
 /bootstrap/compiled.php
 /vendor
 composer.phar
@@ -6,3 +11,4 @@ composer.lock
 .env.php
 .DS_Store
 Thumbs.db
+

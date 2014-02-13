@@ -3,10 +3,15 @@
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
-	"require": {
-		"laravel/framework": "4.1.*",
-		"barryvdh/laravel-ide-helper": "1.*"
-	},
+    "require": {
+        "laravel/framework": "4.1.*",
+        "winkbrace/winkform": "dev-master"
+    },
+    "require-dev": {
+        "codeception/codeception": "~1.8",
+        "barryvdh/laravel-ide-helper": "1.*",
+        "way/generators": "dev-master"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -24,6 +29,7 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
+            "php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
@@ -33,5 +39,6 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
