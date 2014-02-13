@@ -10,7 +10,8 @@
     "require-dev": {
         "codeception/codeception": "~1.8",
         "barryvdh/laravel-ide-helper": "1.*",
-        "way/generators": "dev-master"
+        "way/generators": "dev-master",
+        "mockery/mockery": "dev-master"
     },
 	"autoload": {
 		"classmap": [
