@@ -11,7 +11,8 @@
         "codeception/codeception": "dev-master",
         "barryvdh/laravel-ide-helper": "1.*",
         "way/generators": "dev-master",
-        "mockery/mockery": "dev-master"
+        "mockery/mockery": "dev-master",
+        "fzaninotto/faker": "v1.3.0"
     },
 	"autoload": {
 		"classmap": [
