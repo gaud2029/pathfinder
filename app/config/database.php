@@ -1,5 +1,6 @@
 <?php
 
+/** @noinspection PhpIncludeInspection */
 return array(
 
 	/*

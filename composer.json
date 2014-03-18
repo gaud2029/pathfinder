@@ -1,6 +1,6 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
+	"name": "winkbrace/pathfinder",
+	"description": "Pathfinder Character Sheets.",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
     "require": {
@@ -8,7 +8,7 @@
         "winkbrace/winkform": "dev-master"
     },
     "require-dev": {
-        "codeception/codeception": "~1.8",
+        "codeception/codeception": "dev-master",
         "barryvdh/laravel-ide-helper": "1.*",
         "way/generators": "dev-master",
         "mockery/mockery": "dev-master"
@@ -21,7 +21,10 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+        "psr-0": {
+            "Pathfinder": "app"
+        }
 	},
 	"scripts": {
 		"post-install-cmd": [
