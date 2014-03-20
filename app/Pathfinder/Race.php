@@ -1,6 +1,6 @@
 <?php namespace Pathfinder;
 
-class Race
+class Race extends \Eloquent
 {
 
 }

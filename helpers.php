@@ -9,7 +9,7 @@
 function getPublicProperties($object)
 {
     if (! is_object($object))
-        throw new InvalidArgumentException('function getPublicProperties requires an object.');
+        throw new InvalidArgumentException('function ' . __FUNCTION__ . ' requires an object.');
 
     return get_object_vars($object);
 }
