@@ -25,7 +25,10 @@
 		],
         "psr-0": {
             "Pathfinder": "app"
-        }
+        },
+        "files": [
+            "helpers.php"
+        ]
 	},
 	"scripts": {
 		"post-install-cmd": [
