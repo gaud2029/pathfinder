@@ -14,7 +14,7 @@ class CreateCharacters extends Migration {
 	{
 		Schema::create('characters', function(Blueprint $table)
 		{
-			$table->increments('character_id')->primary();
+			$table->increments('character_id');
             $table->integer('user_id')->references('user_id')->on('users');
             $table->string('name');
             $table->integer('race_id')->references('race_id')->on('races');
@@ -24,7 +24,6 @@ class CreateCharacters extends Migration {
 			$table->timestamps();
 		});
 	}
-
 
 	/**
 	 * Reverse the migrations.
