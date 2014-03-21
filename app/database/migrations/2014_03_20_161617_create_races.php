@@ -13,9 +13,9 @@ class CreateRacesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('classes', function(Blueprint $table)
+		Schema::create('races', function(Blueprint $table)
 		{
-			$table->increments('class_id')->primary();
+			$table->increments('race_id')->primary();
             $table->string('name')->unique();
             $table->string('description');
 			$table->string('size');
