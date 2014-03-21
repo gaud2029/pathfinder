@@ -18,12 +18,6 @@ class CreateClassSkills extends Migration {
 			$table->integer('class_id')->references('class_id')->on('classes');
 			$table->integer('skill_id')->references('skill_id')->on('skills');
 		});
-
-        // TODO fill
-        DB::table('class_skills')->insertGetId(
-            array('class_id' => 1, 'skill_id' => 1),
-            array('class_id' => 1, 'skill_id' => 1),
-        );
 	}
 
 
