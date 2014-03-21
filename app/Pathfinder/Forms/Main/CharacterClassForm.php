@@ -1,6 +1,8 @@
 <?php namespace Pathfinder\Forms\Main;
 
-class CharacterClassForm
+use WinkForm\Form;
+
+class CharacterClassForm extends Form
 {
     public $favoured;
 
@@ -11,4 +13,19 @@ class CharacterClassForm
     public $hitDie;
 
     public $level;
+
+
+    public function __construct()
+    {
+
+    }
+
+    /**
+     * render the form
+     * @return string
+     */
+    public function render()
+    {
+        // TODO: Implement render() method.
+    }
 }
