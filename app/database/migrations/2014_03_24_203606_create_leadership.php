@@ -23,7 +23,7 @@ class CreateLeadership extends Migration {
 			$table->integer('level_6th_followers')->nullable();
 		});
 
-        DB::table('improved_familiar')->insert(array(array(
+        DB::table('leadership')->insert(array(array(
             'leadership_score' => '<= 1',
             'cohort_level' => null,
             'level_1st_followers' => null,
