@@ -9,17 +9,17 @@ class CharacterClassForm extends Form
     public $index;
     /** @var \WinkForm\Input\Checkbox */
     public $favored;
-
+    /** @var \WinkForm\Input\Dropdown */
     public $class;
-
+    /** @var \WinkForm\Input\TextInput */
     public $skillRanks;
-
+    /** @var \WinkForm\Input\TextInput */
     public $hitDie;
-
+    /** @var \WinkForm\Input\TextInput */
     public $level;
 
     /**
-     * @param $index
+     * @param int $index
      */
     public function __construct($index)
     {
