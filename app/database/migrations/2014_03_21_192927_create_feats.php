@@ -19,8 +19,8 @@ class CreateFeats extends Migration {
             $table->string('prerequisites')->nullable();
 			$table->string('effect')->nullable();
             $table->text('description')->nullable();
-			$table->string('benefit');
-			$table->string('special')->nullable();
+			$table->text('benefit');
+			$table->text('special')->nullable();
 		});
 
         Db::table('feats')->insert(array(array(
