@@ -107,7 +107,7 @@ class CreateRaces extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('classes');
+		Schema::drop('races');
 	}
 
 }

@@ -18,7 +18,7 @@ class CreateFeats extends Migration {
 			$table->string('feat_type');
             $table->string('prerequisites')->nullable();
 			$table->string('effect')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
 			$table->string('benefit');
 			$table->string('special')->nullable();
 		});
