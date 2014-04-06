@@ -21,10 +21,8 @@ function getPublicProperties($object)
  */
 function prepareArrayForDropdown(array $array)
 {
-    if (array_is_assoc($array))
-        return $array;
-
-    return array_combine($array, $array);
+    $preparer = new \Pathfinder\Forms\Helper\InputValuesPreparer($array);
+    return $preparer->prepare();
 }
 
 /**
