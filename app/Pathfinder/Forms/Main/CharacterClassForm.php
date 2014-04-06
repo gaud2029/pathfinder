@@ -27,7 +27,8 @@ class CharacterClassForm extends Form
 
         $this->favored = Form::checkbox('favored');
 
-        $this->class = Form::dropdown('class')->appendOptions(prepareArrayForDropdown(CharacterClass::all(array())));
+        $classes = CharacterClass::all(array('class_id', 'name'))->lists('name', 'class_id');
+        $this->class = Form::dropdown('class')->appendOptions($classes);
 
         $this->skillRanks = Form::text('skillRanks')->addValidation('max:999|numeric');
 

@@ -29,4 +29,13 @@ class PlayerForm extends Form
     {
 
     }
+
+    /**
+     * @param int $xp
+     * @return int
+     */
+    protected function fetchNextLevelXp($xp)
+    {
+        return (int) \Db::table('character_advancement')->where('fast_xp', '>', $xp)->min('fast_xp');
+    }
 }

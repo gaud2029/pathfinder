@@ -9,9 +9,9 @@ class MainController extends BaseController {
 	{
         $playerForm = new PlayerForm();
         $characterForm = new CharacterForm();
-        $abilitiesForm = $playerForm;
+        $abilitiesForm = $playerForm; // TODO build abilitiesForm
 
-		return View::make('main', compact($playerForm, $abilitiesForm, $characterForm));
+		return View::make('main', compact('playerForm', 'abilitiesForm', 'characterForm'));
 	}
 
 }

@@ -54,9 +54,9 @@ class CharacterForm extends Form
             'F' => 'Female'
         ));
 
-        $races = Race::all(array('race_id', 'name'))->toArray();
+        $races = Race::all(array('race_id', 'name'))->lists('name', 'race_id');
         $this->race = new Dropdown('race');
-        $this->race->appendOptions(prepareArrayForDropdown($races));
+        $this->race->appendOptions($races);
 
         $this->size = Form::dropdown('size')->appendOptions(prepareArrayForDropdown(array('S','M','L')));
 
@@ -81,6 +81,11 @@ class CharacterForm extends Form
      */
     public function render()
     {
-
+        $data = array(
+            'classSubForms' => $this->classForms,
+            'intModifier' => null,
+            'conModifier' => null,
+        );
+        return \View::make('form.character', $data);
     }
 }

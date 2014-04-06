@@ -18,10 +18,10 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    @include('form.special_abilities')
+                    <!-- 'form.special_abilities' -->
                 </div>
                 <div class="col-md-8">
-                    @include('form.skills')
+                    <!-- 'form.skills' -->
                 </div>
             </div>
 

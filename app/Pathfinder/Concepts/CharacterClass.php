@@ -2,5 +2,5 @@
 
 class CharacterClass extends \Eloquent
 {
-
+    protected $table = 'classes';
 }
