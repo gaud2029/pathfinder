@@ -1,13 +1,11 @@
+@extends('layout')
 
         @section('content')
         <div class="container-fluid">
 
             <div class="row">
-                <img id="logo" class="img-responsive" src="{{ public_path('img') }}steigergenootschap.png" alt="Het Steigergenootschap" />
-            </div>
-
-            <div class="row">
                 <div class="col-md-4">
+                    <img id="logo" class="img-responsive" src="img/steigergenootschap.png" alt="Het Steigergenootschap" />
                     {{ $playerForm->render() }}
                     {{ $abilitiesForm->render() }}
                 </div>

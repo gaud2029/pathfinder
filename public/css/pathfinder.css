@@ -1,0 +1,15 @@
+body                            { background-color: #eee; }
+
+label, input, select, textarea  { padding:5px; margin-right:5px; display:inline; float:left; }
+input.small                     { width:50px; }
+input.medium                    { width:100px; }
+input.large                     { width:200px; }
+
+/* bootstrap */
+.form-control, table.table      { width:auto; }
+
+#character_classes .sequence    { width:20px; padding-top:15px; }
+#character_classes .favored     { width:80px; text-align: right; }
+#character_classes .hitdie      { width:90px; }
+#character_classes .hitdie label { margin-right:0; }
+#character_classes input[type="checkbox"] { margin:0; }

@@ -7,10 +7,13 @@
     <title>Het Steigergenootschap {{ isset($page) ? '| ' . $page : '' }}</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/pathfinder.css" rel="stylesheet">
 </head>
 
 <body>
-    @yield('content')
+    <form role="form">
+        @yield('content')
+    </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

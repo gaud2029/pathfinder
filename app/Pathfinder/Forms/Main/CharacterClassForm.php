@@ -25,16 +25,16 @@ class CharacterClassForm extends Form
     {
         $this->index = $index;
 
-        $this->favored = Form::checkbox('favored');
+        $this->favored = Form::checkbox('favored'.$index);
 
         $classes = CharacterClass::all(array('class_id', 'name'))->lists('name', 'class_id');
-        $this->class = Form::dropdown('class')->appendOptions($classes);
+        $this->class = Form::dropdown('class'.$index)->appendOptions($classes)->prependOption('', '');
 
-        $this->skillRanks = Form::text('skillRanks')->addValidation('max:999|numeric');
+        $this->skillRanks = Form::text('skillRanks'.$index)->setMaxLength(2)->addValidation('max:99|numeric')->addClass('small');
 
-        $this->hitDie = Form::text('hitDie')->setMaxLength(2)->addValidation('numeric')->setLabel('d');
+        $this->hitDie = Form::text('hitDie'.$index)->setMaxLength(2)->addValidation('numeric')->setLabel('d')->addClass('small');
 
-        $this->level = Form::text('level')->addValidation('max:999|numeric');
+        $this->level = Form::text('level'.$index)->addValidation('max:999|numeric')->addClass('small');
     }
 
     /**
