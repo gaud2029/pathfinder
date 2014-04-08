@@ -50,7 +50,7 @@ class CharacterForm extends Form
         $races = Race::all(array('race_id', 'name'))->lists('name', 'race_id');
         $this->race = Form::dropdown('race')->setLabel('Race')->appendOptions($races);
 
-        $this->size = Form::dropdown('size', 'M')->setLabel('Size')->appendOptions(array('S' => 'Small', 'M' => 'Medium', 'L' => 'Large'));
+        $this->size = Form::dropdown('size', 'M')->setLabel('Size')->appendOptions(array('S' => 'Small', 'M' => 'Medium', 'L' => 'Large'))->setDisabled('disabled');
 
         $this->sizeModifier = Form::text('sizeModifier')->setLabel('Size Modifier')->addClass('small')->setDisabled('disabled');
 

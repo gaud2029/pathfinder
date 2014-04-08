@@ -1,15 +1,18 @@
 @extends('layout')
 
-        @section('content')
+    @section('content')
+    <form role="form" method="post" action="">
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img id="logo" class="img-responsive" src="{{ asset('img/steigergenootschap.png') }}" alt="Het Steigergenootschap" />
                     {{ $playerForm->render() }}
+                </div>
+                <div class="col-md-3">
                     {{ $attributesForm->render() }}
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     {{ $characterForm->render() }}
                 </div>
             </div>
@@ -24,4 +27,5 @@
             </div>
 
         </div>
-        @stop
+    </form>
+    @stop
