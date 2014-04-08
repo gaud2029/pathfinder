@@ -1,4 +1,6 @@
 body                            { background-color: #eee; }
+h1, h2, h3                      { clear:both; text-transform:uppercase; font-weight:bold; }
+.form-block                     { float:left; padding-bottom:1em; }
 
 label, input, select, textarea  { padding:5px; margin-right:5px; display:inline; float:left; }
 label                           { margin-top:3px; }
@@ -16,6 +18,7 @@ input.large                     { width:200px; }
 #player_fields .xp.next_level   { margin-left:4%; }
 
 /* character */
+#character #name                { width:263px; }
 #character_classes .sequence    { width:20px; padding-top:15px; }
 #character_classes .favored     { width:80px; text-align: right; }
 #character_classes .hitdie      { width:90px; }
@@ -23,6 +26,10 @@ input.large                     { width:200px; }
 #character_classes input[type="checkbox"] { margin:0; }
 
 #gender-container label         { margin-top:6px; }
+
+/* attributes */
+th.attribute-field              { width:60px; font-size:13px; }
+table#attributes th.attribute-key { width:70px; padding-top:10px; }
 
 /* modifier */
 .modifier                       { position:relative; width:80px; margin:0; padding:1px; display:inline; line-height:2em; }

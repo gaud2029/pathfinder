@@ -23,10 +23,9 @@ class ModifierRenderer implements RenderableInterface
      */
     public function __construct($type, $value = null)
     {
-        $this->allTypes = Attribute::listKeys();
+        $this->allTypes = array('STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA');
         $this->setType($type);
         $this->value = $value;
-        // TODO add colors per type and write tests
     }
 
     /**

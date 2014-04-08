@@ -1,4 +1,4 @@
-<div id="character">
+<div id="character" class="form-block">
 
     <h2>Character</h2>
 

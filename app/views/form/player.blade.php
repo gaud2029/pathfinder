@@ -1,4 +1,4 @@
-<div id="player">
+<div id="player" class="form-block">
 
     <div id="player_fields">
         {{ $player . BRCLR }}

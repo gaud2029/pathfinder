@@ -3,16 +3,13 @@
 class Attribute extends \Eloquent
 {
     /** @var array */
-    protected static $keys = array();
+    protected static $keys = array('STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA');
 
     /**
      * @return array
      */
     public static function listKeys()
     {
-        if (empty(static::$keys))
-            static::$keys = Attribute::all()->lists('key');
-
         return static::$keys;
     }
 }

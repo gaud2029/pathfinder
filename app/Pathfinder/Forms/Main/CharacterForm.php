@@ -3,10 +3,6 @@
 use Pathfinder\Concepts\Race;
 use Pathfinder\ViewHelpers\ModifierRenderer;
 use WinkForm\Form;
-use WinkForm\Input\Dropdown;
-use WinkForm\Input\HiddenInput;
-use WinkForm\Input\RadioInput;
-use WinkForm\Input\TextInput;
 
 class CharacterForm extends Form
 {
@@ -56,7 +52,7 @@ class CharacterForm extends Form
 
         $this->size = Form::dropdown('size', 'M')->setLabel('Size')->appendOptions(array('S' => 'Small', 'M' => 'Medium', 'L' => 'Large'));
 
-        $this->sizeModifier = Form::text('sizeModifier')->setLabel('Size Modifier')->addClass('small');
+        $this->sizeModifier = Form::text('sizeModifier')->setLabel('Size Modifier')->addClass('small')->setDisabled('disabled');
 
         $this->levelAdjustment = Form::text('levelAdjustment')->setLabel('Level Adjustment');
 

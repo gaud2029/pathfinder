@@ -5,9 +5,9 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <img id="logo" class="img-responsive" src="{{ asset('img/tele2logo.png') }}" alt="Het Steigergenootschap" />
+                    <img id="logo" class="img-responsive" src="{{ asset('img/steigergenootschap.png') }}" alt="Het Steigergenootschap" />
                     {{ $playerForm->render() }}
-                    {{ $abilitiesForm->render() }}
+                    {{ $attributesForm->render() }}
                 </div>
                 <div class="col-md-8">
                     {{ $characterForm->render() }}
