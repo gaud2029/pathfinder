@@ -26,6 +26,7 @@ class ModifierRenderer implements RenderableInterface
         $this->allTypes = Attribute::getAllKeys();
         $this->setType($type);
         $this->value = $value;
+        // TODO add colors per type and write tests
     }
 
     /**
