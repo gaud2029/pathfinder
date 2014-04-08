@@ -57,11 +57,17 @@ class CharacterForm extends Form
         $this->size = Form::dropdown('size', 'M')->setLabel('Size')->appendOptions(array('S' => 'Small', 'M' => 'Medium', 'L' => 'Large'));
 
         $this->sizeModifier = Form::text('sizeModifier')->setLabel('Size Modifier')->addClass('small');
+
         $this->levelAdjustment = Form::text('levelAdjustment')->setLabel('Level Adjustment');
+
         $this->effectiveLevel = Form::text('effectiveLevel')->setLabel('Effective level');
+
         $this->hp = Form::text('hp')->setLabel('HP');
+
         $this->ranks = Form::text('ranks')->setLabel('Ranks');
+
         $this->intPerLevel = new ModifierRenderer('int');
+
         $this->conPerLevel = new ModifierRenderer('con');
 
         for ($i=1; $i<=5; $i++)
