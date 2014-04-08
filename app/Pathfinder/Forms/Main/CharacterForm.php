@@ -1,6 +1,7 @@
 <?php namespace Pathfinder\Forms\Main;
 
 use Pathfinder\Concepts\Race;
+use Pathfinder\ViewHelpers\ModifierRenderer;
 use WinkForm\Form;
 use WinkForm\Input\Dropdown;
 use WinkForm\Input\HiddenInput;
@@ -81,10 +82,13 @@ class CharacterForm extends Form
      */
     public function render()
     {
+        $int = new ModifierRenderer('int', 2); // TODO fetch modifier value
+        $con = new ModifierRenderer('con', -1);
+
         $data = array(
             'classSubForms' => $this->classForms,
-            'intModifier' => null,
-            'conModifier' => null,
+            'intModifier' => $int->render(),
+            'conModifier' => $con->render(),
         );
         return \View::make('form.character', $data);
     }
