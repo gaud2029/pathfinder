@@ -3,8 +3,17 @@
     <h2>Character</h2>
 
     <div class="table-responsive">
-        <table class="table">
-
+        <table class="table" id="character_table">
+            <tr>
+                <td rowspan="2">{{ $form->alliance->render() }}</td>
+                <td colspan="2">{{ $form->name->render() }}</td>
+                <td>{{ $form->gender->render() }}</td>
+            </tr>
+            <tr>
+                <td>{{ $form->race->render() }}</td>
+                <td>{{ $form->size->render() }}</td>
+                <td>{{ $form->sizeModifier->render() }}</td>
+            </tr>
         </table>
     </div>
 

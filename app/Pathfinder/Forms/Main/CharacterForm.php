@@ -45,29 +45,30 @@ class CharacterForm extends Form
     {
         parent::__construct();
 
-        $this->alliance = new HiddenInput('alliance');
+        $this->alliance = Form::hidden('alliance');
 
-        $this->name = new TextInput('name');
+        $this->name = Form::text('name')->setLabel('Name');
 
-        $this->gender = new RadioInput('gender');
-        $this->gender->appendOptions(array(
-            'M' => 'Male',
-            'F' => 'Female'
-        ));
+        $this->gender = Form::radio('gender')->appendOptions(array('M' => 'Male', 'F' => 'Female'));
 
         $races = Race::all(array('race_id', 'name'))->lists('name', 'race_id');
-        $this->race = new Dropdown('race');
-        $this->race->appendOptions($races);
+        $this->race = Form::dropdown('race')->setLabel('Race')->appendOptions($races);
 
-        $this->size = Form::dropdown('size')->appendOptions(prepareArrayForDropdown(array('S','M','L')));
+        $this->size = Form::dropdown('size', 'M')->setLabel('Size')->appendOptions(array('S' => 'Small', 'M' => 'Medium', 'L' => 'Large'));
 
-        $this->sizeModifier = Form::text('sizeModifier');
-        $this->levelAdjustment = Form::text('levelAdjustment');
-        $this->effectiveLevel = Form::text('effectiveLevel');
-        $this->hp = Form::text('hp');
-        $this->ranks = Form::text('ranks');
-        $this->intPerLevel = Form::text('intPerLevel');
-        $this->conPerLevel = Form::text('conPerLevel');
+        $this->sizeModifier = Form::text('sizeModifier')->setLabel('Size Modifier')->addClass('small');
+
+        $this->levelAdjustment = Form::text('levelAdjustment')->setLabel('Level Adjustment');
+
+        $this->effectiveLevel = Form::text('effectiveLevel')->setLabel('Effective level');
+
+        $this->hp = Form::text('hp')->setLabel('HP');
+
+        $this->ranks = Form::text('ranks')->setLabel('Ranks');
+
+        $this->intPerLevel = new ModifierRenderer('int');
+
+        $this->conPerLevel = new ModifierRenderer('con');
 
         for ($i=1; $i<=5; $i++)
         {
@@ -82,13 +83,11 @@ class CharacterForm extends Form
      */
     public function render()
     {
-        $int = new ModifierRenderer('int', 2); // TODO fetch modifier value
-        $con = new ModifierRenderer('con', -1);
-
         $data = array(
+            'form' => $this,
             'classSubForms' => $this->classForms,
-            'intModifier' => $int->render(),
-            'conModifier' => $con->render(),
+            'intModifier' => $this->intPerLevel->render(),  // TODO fetch modifier value;
+            'conModifier' => $this->conPerLevel->render(),
         );
         return \View::make('form.character', $data);
     }

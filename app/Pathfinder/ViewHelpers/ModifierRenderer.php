@@ -21,9 +21,9 @@ class ModifierRenderer implements RenderableInterface
      * @param string $type
      * @param int $value
      */
-    public function __construct($type, $value)
+    public function __construct($type, $value = null)
     {
-        $this->allTypes = Attribute::getAllKeys();
+        $this->allTypes = Attribute::listKeys();
         $this->setType($type);
         $this->value = $value;
         // TODO add colors per type and write tests
@@ -49,4 +49,17 @@ class ModifierRenderer implements RenderableInterface
 
         $this->type = $type;
     }
+
+    /**
+     * @param $value
+     * @throws \InvalidArgumentException
+     */
+    public function setValue($value)
+    {
+        if (! is_numeric($value) || $value < -10 || $value > 20)
+            throw new \InvalidArgumentException('Invalid value given for Attribute modifier');
+
+        $this->value = (int) $value;
+    }
+
 }

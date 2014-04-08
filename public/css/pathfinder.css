@@ -1,20 +1,36 @@
 body                            { background-color: #eee; }
 
 label, input, select, textarea  { padding:5px; margin-right:5px; display:inline; float:left; }
+label                           { margin-top:3px; }
+input[type="checkbox"] + label,
+input[type="radio"] + label     { font-weight:normal; }
 input.small                     { width:50px; }
 input.medium                    { width:100px; }
 input.large                     { width:200px; }
 
-/* bootstrap */
 .form-control, table.table      { width:auto; }
 
+/* player */
+#player_fields .form-control    { width:100%; }
+#player_fields .xp              { width:48%; float:left; }
+#player_fields .xp.next_level   { margin-left:4%; }
+
+/* character */
 #character_classes .sequence    { width:20px; padding-top:15px; }
 #character_classes .favored     { width:80px; text-align: right; }
 #character_classes .hitdie      { width:90px; }
 #character_classes .hitdie label { margin-right:0; }
 #character_classes input[type="checkbox"] { margin:0; }
 
+#gender-container label         { margin-top:6px; }
+
 /* modifier */
 .modifier                       { position:relative; width:80px; margin:0; padding:1px; display:inline; line-height:2em; }
 .modifier_type                  { width:100%; opacity:0.3; font-size:1.5em; font-weight:bold; }
 .modifier_value                 { position:absolute; top:-0.25em; left:16px; z-index:2; font-size:2em; font-weight:bold; }
+.str_color                      { color:darkblue; }
+.dex_color                      { color:darkgreen; }
+.con_color                      { color:darkred; }
+.int_color                      { color:darkcyan; }
+.wis_color                      { color:darkgrey; }
+.cha_color                      { color:darkmagenta; }

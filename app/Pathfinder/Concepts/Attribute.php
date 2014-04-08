@@ -8,7 +8,7 @@ class Attribute extends \Eloquent
     /**
      * @return array
      */
-    public static function getAllKeys()
+    public static function listKeys()
     {
         if (empty(static::$keys))
             static::$keys = Attribute::all()->lists('key');
