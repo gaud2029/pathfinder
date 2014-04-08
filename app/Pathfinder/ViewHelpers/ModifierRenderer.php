@@ -23,7 +23,7 @@ class ModifierRenderer implements RenderableInterface
      */
     public function __construct($type, $value)
     {
-        $this->allTypes = Attribute::getAllKeys();
+        $this->allTypes = Attribute::listKeys();
         $this->setType($type);
         $this->value = $value;
     }
@@ -48,4 +48,5 @@ class ModifierRenderer implements RenderableInterface
 
         $this->type = $type;
     }
+
 }
