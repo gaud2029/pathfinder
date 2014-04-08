@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    // set size fields when race is selected
     $("select#race").change(function()
     {
         if (['Gnome', 'Halfling'].indexOf($("select#race option:selected").text()) > -1)
