@@ -11,7 +11,7 @@ use WinkForm\Form;
  */
 class AttributesForm extends Form
 {
-    /** @var array */
+    /** @var AttributeForm[] */
     protected $attributeForms = array();
 
 

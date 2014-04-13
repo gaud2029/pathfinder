@@ -30,7 +30,7 @@ class AttributeForm extends Form
         $this->key = new ModifierRenderer($key);
         $this->score = Form::text($key.'AttributeScore')->addClass('small');
         $this->bonus = Form::text($key.'AttributeBonus')->addClass('small');
-        $this->modifier = Form::text($key.'AttributeModifier')->addClass('small')->setDisabled('readonly');
+        $this->modifier = Form::text($key.'AttributeModifier')->addClass('small')->setDisabled('disabled');
     }
 
     public function render()

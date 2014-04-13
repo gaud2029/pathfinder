@@ -43,7 +43,7 @@
             </tbody>
             <tfoot class="leveling_info">
                 <tr>
-                    <td colspan="3">Favored class has +1 HP or skill rank</td>
+                    <td colspan="3">Favored class has +1 HP<br/>or +1 skill rank per level</td>
                     <td>+{{ $intModifier }}<br/>per level</td>
                     <td>+{{ $conModifier }}<br/>per level</td>
                     <td></td>
