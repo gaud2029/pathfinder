@@ -41,3 +41,6 @@ table#attributes th.attribute-key { width:70px; padding-top:10px; }
 .int_color                      { color:darkcyan; }
 .wis_color                      { color:darkgrey; }
 .cha_color                      { color:darkmagenta; }
+
+/* alliance */
+td#alliance-container           { vertical-align:middle; }

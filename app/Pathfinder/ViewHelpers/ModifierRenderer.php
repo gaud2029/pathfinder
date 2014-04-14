@@ -1,7 +1,6 @@
 <?php namespace Pathfinder\ViewHelpers;
 
 use Illuminate\Support\Contracts\RenderableInterface;
-use Pathfinder\Concepts\Attribute;
 
 /**
  * Class ModifierRenderer

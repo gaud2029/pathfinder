@@ -34,4 +34,6 @@
 
         </div>
     </form>
+
+    <script src="{{ asset('js/alliance.js') }}"></script>
     @stop

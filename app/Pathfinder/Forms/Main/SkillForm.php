@@ -8,8 +8,8 @@ use WinkForm\Input\TextInput;
 
 class SkillForm extends Form
 {
-    /** @var string */
-    public $name;
+    /** @var Skill */
+    public $skill;
     /** @var Checkbox */
     public $untrained;
     /** @var TextInput */
@@ -32,7 +32,7 @@ class SkillForm extends Form
      */
     public function __construct(Skill $skill)
     {
-        $this->name = $skill->name;
+        $this->skill = $skill;
         $this->untrained = Form::checkbox('untrained', (bool) $skill->untrained)->setDisabled('disabled');
         $this->bonus = Form::text('bonus')->setDisabled('disabled');
         $this->modifier = new ModifierRenderer($skill->modifierAttributeKey);
@@ -44,10 +44,10 @@ class SkillForm extends Form
     }
 
     /**
-     * @return string
+     * @throws \Exception
      */
     public function render()
     {
-
+        throw new \Exception('A SkillForm is rendered in the SkillsForm');
     }
 }

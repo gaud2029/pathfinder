@@ -5,7 +5,10 @@
     <div class="table-responsive">
         <table class="table" id="character_table">
             <tr>
-                <td rowspan="2">{{ $form->alliance->render() }}</td>
+                <td rowspan="2" id="alliance-container">
+                    <canvas id="allianceCanvas" width="60" height="60"></canvas>
+                    {{ $form->alliance->render() }}
+                </td>
                 <td colspan="2">{{ $form->name->render() }}</td>
                 <td>{{ $form->gender->render() }}</td>
             </tr>

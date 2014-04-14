@@ -22,6 +22,8 @@ class Skill extends \Eloquent implements RenderableInterface
      */
     public function render()
     {
-        return
+        $data = array('name' => $this->name, 'description' => $this->description);
+
+        return \View::make('partials.skill', $data);
     }
 }
