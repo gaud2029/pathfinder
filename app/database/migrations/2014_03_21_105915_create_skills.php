@@ -120,12 +120,6 @@ class CreateSkills extends Migration {
             'untrained' => false,
         ), array(
             'name' => 'Knowledge (History)',
-            'description' => 'You are educated in the field of study Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts) and can answer both simple and complex questions.',
-            'modifier_attribute_key' => 'INT',
-            'ac_penalty' => false,
-            'untrained' => false,
-        ), array(
-            'name' => 'Knowledge (Arcana)',
             'description' => 'You are educated in the field of study History (wars, colonies, migrations, founding of cities) and can answer both simple and complex questions.',
             'modifier_attribute_key' => 'INT',
             'ac_penalty' => false,

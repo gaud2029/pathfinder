@@ -5,29 +5,35 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <img id="logo" class="img-responsive" src="{{ asset('img/steigergenootschap.png') }}" alt="Het Steigergenootschap" />
                     {{ $playerForm->render() }}
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6">
                     {{ $attributesForm->render() }}
                 </div>
-                <div class="col-md-6">
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
                     {{ $characterForm->render() }}
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-4">
-                    <!-- 'form.special_abilities' -->
-                </div>
-                <div class="col-md-8">
-                    <!-- 'form.skills' -->
+                <div class="col-md-12">
+                    {{ $skillsForm->render() }}
                 </div>
             </div>
 
             <div class="row">
-                <div class=".col-md-3 .col-md-offset-3">
+                <div class="col-md-12">
+                    <!-- 'form.special_abilities' -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
                     {{ $submit->render() }}
                 </div>
             </div>

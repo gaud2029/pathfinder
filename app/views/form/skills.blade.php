@@ -5,35 +5,33 @@
     <div class="table-responsive">
         <table class="table" id="character_classes">
             <thead>
-            <tr>
-                <th></th>
-                <th>Favored</th>
-                <th>Classes</th>
-                <th>Skill ranks</th>
-                <th>Hit die</th>
-                <th>Level</th>
-            </tr>
+                <tr>
+                    <th></th>
+                    <th>Untrained</th>
+                    <th>Skill Bonus</th>
+                    <th>Ability Modifier</th>
+                    <th>Class Skill</th>
+                    <th>Ranks</th>
+                    <th>Racial, Feats</th>
+                    <th>Misc</th>
+                    <th>AC Penalty</th>
+                </tr>
             </thead>
             <tbody>
-            @foreach ($classSubForms as $form)
-            <tr class="character_class">
-                <td class="sequence">{{ $form->index }}</td>
-                <td class="favored">{{ $form->favored->render() }}</td>
-                <td>{{ $form->class->render() }}</td>
-                <td>{{ $form->skillRanks->render() }}</td>
-                <td class="hitdie">{{ $form->hitDie->render() }}</td>
-                <td><span class="">{{ $form->level->render() }}</span></td>
-            </tr>
-            @endforeach
+                @foreach ($skillForms as $form)
+                <tr class="character_class">
+                    <td>{{ $form->skill->render() }}</td>
+                    <td>{{ $form->untrained->render() }}</td>
+                    <td>{{ $form->bonus->render() }}</td>
+                    <td>{{ $form->modifier->render() }}</td>
+                    <td>{{ $form->classSkill->render() }}</td>
+                    <td>{{ $form->ranks->render() }}</td>
+                    <td>{{ $form->racialOrFeats->render() }}</td>
+                    <td>{{ $form->misc->render() }}</td>
+                    <td>{{ $form->acPenalty->render() }}</td>
+                </tr>
+                @endforeach
             </tbody>
-            <tfoot class="leveling_info">
-            <tr>
-                <td colspan="3">Favored class has +1 HP<br/>or +1 skill rank per level</td>
-                <td>+{{ $intModifier }}<br/>per level</td>
-                <td>+{{ $conModifier }}<br/>per level</td>
-                <td></td>
-            </tr>
-            </tfoot>
         </table>
     </div>
 

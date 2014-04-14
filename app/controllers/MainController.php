@@ -3,6 +3,7 @@
 use Pathfinder\Forms\Main\AttributesForm;
 use Pathfinder\Forms\Main\CharacterForm;
 use Pathfinder\Forms\Main\PlayerForm;
+use Pathfinder\Forms\Main\SkillsForm;
 use WinkForm\Form;
 
 class MainController extends BaseController {
@@ -13,7 +14,8 @@ class MainController extends BaseController {
             'playerForm' => new PlayerForm(),
             'characterForm' => new CharacterForm(),
             'attributesForm' => new AttributesForm(),
-            'submit' => Form::submit('submit_button', 'Save')->setWidth(100),
+            'skillsForm' => new SkillsForm(),
+            'submit' => Form::submit('submit_button', 'Save')->addClass('btn-lg btn-primary'),
         );
 
 		return View::make('main', $data);

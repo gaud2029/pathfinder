@@ -34,13 +34,13 @@ class SkillForm extends Form
     {
         $this->skill = $skill;
         $this->untrained = Form::checkbox('untrained', (bool) $skill->untrained)->setDisabled('disabled');
-        $this->bonus = Form::text('bonus')->setDisabled('disabled');
-        $this->modifier = new ModifierRenderer($skill->modifierAttributeKey);
+        $this->bonus = Form::text('bonus')->setDisabled('disabled')->addClass('small');
+        $this->modifier = new ModifierRenderer($skill->modifier_attribute_key);
         $this->classSkill = Form::checkbox('classSkill')->setDisabled('disabled');
-        $this->ranks = Form::text('ranks');
-        $this->racialOrFeats = Form::text('racialOrFeats');
-        $this->misc = Form::text('misc');
-        $this->acPenalty = Form::text('acPenalty')->setDisabled('disabled');
+        $this->ranks = Form::text('ranks')->addClass('small');
+        $this->racialOrFeats = Form::text('racialOrFeats')->addClass('small');
+        $this->misc = Form::text('misc')->addClass('small');
+        $this->acPenalty = Form::text('acPenalty')->setDisabled('disabled')->addClass('small');
     }
 
     /**

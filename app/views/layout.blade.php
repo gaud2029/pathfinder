@@ -11,8 +11,9 @@
 </head>
 
 <body>
-
-    @yield('content')
+    <div id="container">
+        @yield('content')
+    </div>
 
     <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>

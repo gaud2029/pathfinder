@@ -43,7 +43,7 @@ class ModifierRenderer implements RenderableInterface
     {
         $type = strtoupper($type);
         if (! in_array($type, $this->allTypes))
-            throw new \InvalidArgumentException('Invalid attribute type key given');
+            throw new \InvalidArgumentException('Invalid attribute type key given: "'.$type.'"');
 
         $this->type = $type;
     }

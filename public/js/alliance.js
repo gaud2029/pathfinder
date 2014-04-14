@@ -89,7 +89,6 @@ function drawAlliance(selected)
         else if (pos.x >= 38.5 && pos.x <= 46.5 && pos.y >= 25.5 && pos.y <= 32.5) { fillAllianceTile('LE', 'grey'); }
         else if (pos.x >= 32.5 && pos.x <= 38.5 && pos.y >= 32.5 && pos.y <= 38.5) { fillAllianceTile('NE', 'grey'); }
         else if (pos.x >= 25.5 && pos.x <= 32.5 && pos.y >= 38.5 && pos.y <= 45.5) { fillAllianceTile('CE', 'grey'); }
-        console.log(pos);
     }, false);
 }
 

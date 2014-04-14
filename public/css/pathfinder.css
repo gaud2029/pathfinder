@@ -1,6 +1,18 @@
-body                            { background-color: #eee; }
-h1, h2, h3                      { clear:both; text-transform:uppercase; font-weight:bold; }
+@font-face {
+    font-family: 'Crown Title';
+    src: url('../fonts/crown-title.ttf');
+}
+@font-face {
+    font-family: 'Celticmd';
+    src: url('../fonts/celticmd.ttf');
+}
+
+body                            { background:url('../img/background.jpg') top center repeat-y lightgoldenrodyellow; }
+div#container                   { width:100%; height:100%; background:url('../img/background-head.jpg') top center no-repeat; padding-top:100px; }
+h1, h2, h3                      { font-family:Celticmd, Verdana; clear:both; text-transform:uppercase; font-weight:bold; }
 .form-block                     { float:left; padding-bottom:1em; }
+
+.container-fluid                { margin-bottom:30px; max-width:800px; margin-left:auto; margin-right:auto; }
 
 label, input, select, textarea  { padding:5px; margin-right:5px; display:inline; float:left; }
 label                           { margin-top:3px; }
@@ -11,6 +23,8 @@ input.medium                    { width:100px; }
 input.large                     { width:200px; }
 
 .form-control, table.table      { width:auto; }
+
+img#logo                        { margin-top:20px; }
 
 /* player */
 #player_fields .form-control    { width:100%; }
@@ -33,14 +47,14 @@ table#attributes th.attribute-key { width:70px; padding-top:10px; }
 
 /* modifier */
 .modifier                       { position:relative; width:80px; margin:0; padding:1px; display:inline; line-height:2em; }
-.modifier_type                  { width:100%; opacity:0.3; font-size:1.5em; font-weight:bold; }
-.modifier_value                 { position:absolute; top:-0.25em; left:16px; z-index:2; font-size:2em; font-weight:bold; }
-.str_color                      { color:darkblue; }
-.dex_color                      { color:darkgreen; }
-.con_color                      { color:darkred; }
-.int_color                      { color:darkcyan; }
-.wis_color                      { color:darkgrey; }
-.cha_color                      { color:darkmagenta; }
+.modifier-type                  { width:100%; opacity:0.3; font-size:1.5em; font-weight:bold; }
+.modifier-value                 { position:absolute; top:-0.25em; left:16px; z-index:2; font-size:2em; font-weight:bold; }
+.str-color                      { color:darkblue; }
+.dex-color                      { color:darkgreen; }
+.con-color                      { color:darkred; }
+.int-color                      { color:darkcyan; }
+.wis-color                      { color:darkgrey; }
+.cha-color                      { color:darkmagenta; }
 
 /* alliance */
 td#alliance-container           { vertical-align:middle; }
