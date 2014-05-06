@@ -2,7 +2,6 @@
 
 /**
  * Class InputValuesPreparer
- * @package Pathfinder\Forms\Helper
  *
  * InputValuesPreparer is responsible for preparing arrays to be used by the inputs that have multiple values
  */
@@ -19,6 +18,9 @@ class InputValuesPreparer
         $this->data = $data;
     }
 
+    /**
+     * @return array
+     */
     public function prepare()
     {
         if (array_is_assoc($this->data))

@@ -21,4 +21,10 @@ class MainController extends BaseController {
 		return View::make('main', $data);
 	}
 
+    public function handlePost()
+    {
+        $input = Input::all();
+        dd($input);
+    }
+
 }

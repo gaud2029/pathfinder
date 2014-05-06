@@ -25,7 +25,7 @@ class CharacterClassForm extends Form
     {
         $this->index = $index;
 
-        $this->favored = Form::checkbox('favored'.$index);
+        $this->favored = Form::radio('favored')->setValues(array($index => $index));
 
         $classes = CharacterClass::all(array('class_id', 'name'))->lists('name', 'class_id');
         $this->class = Form::dropdown('class'.$index)->appendOptions($classes)->prependOption('', '');
@@ -45,5 +45,30 @@ class CharacterClassForm extends Form
     public function render()
     {
         throw new \Exception('Rendering per Input is done in the view');
+    }
+
+    /**
+     * @param CharacterClass $class
+     * @param boolean $favored
+     * @param int $level
+     */
+    public function setSelected(CharacterClass $class, $favored, $level)
+    {
+        if ($favored)
+            $this->favored->setSelected($this->getFavoredValue());
+
+        $this->class->setSelected($class->name);
+        $this->skillRanks->setSelected($class->skill_ranks_per_level);
+        $this->hitDie->setSelected($class->hit_die);
+        $this->level->setSelected($level);
+    }
+
+    /**
+     * @return int $index
+     */
+    protected function getFavoredValue()
+    {
+        $values = $this->favored->getValues();
+        return reset($values);
     }
 }

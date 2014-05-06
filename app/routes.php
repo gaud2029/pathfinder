@@ -13,3 +13,4 @@
 
 Route::get('/', 'MainController@index');
 Route::get('/main', 'MainController@index');
+Route::post('/main', 'MainController@handlePost');

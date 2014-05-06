@@ -1,7 +1,7 @@
 @extends('layout')
 
     @section('content')
-    <form role="form" method="post" action="">
+    <form role="form" method="post" action="{{ url('main') }}">
         <div class="container-fluid">
 
             <div class="row">
