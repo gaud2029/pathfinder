@@ -2,6 +2,17 @@
 
 use Illuminate\Support\Contracts\RenderableInterface;
 
+/**
+ * Pathfinder\Abilities\Skill
+ *
+ * @property integer $skill_id
+ * @property string $name
+ * @property string $description
+ * @property string $modifier_attribute_key
+ * @property boolean $ac_penalty
+ * @property boolean $untrained
+ * @property-read \character_skill $characterSkill
+ */
 class Skill extends \Eloquent implements RenderableInterface
 {
     /** @var string */

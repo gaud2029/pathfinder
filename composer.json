@@ -38,6 +38,7 @@
 		"post-update-cmd": [
 			"php artisan clear-compiled",
             "php artisan ide-helper:generate",
+            "php artisan ide-helper:models -W --dir=\"app/Pathfinder/Concepts\" --dir=\"app/Pathfinder/Abilities\" --dir=\"app/Pathfinder/Charactesr\" --dir=\"app/Pathfinder/Equipment\"",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
