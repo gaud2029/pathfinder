@@ -14,7 +14,7 @@ class SkillsFormTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->skillForm = new SkillForm(new Skill());
+        $this->skillForm = new SkillForm(Skill::first());
         $this->skillsForm = new SkillsForm();
     }
 

@@ -33,12 +33,12 @@ class ModifierRendererTest extends TestCase
     public function testRender()
     {
         $actual = (string) $this->renderer->render();
-        $this->assertContains('str_color', $actual);
+        $this->assertContains('str-color', $actual);
     }
 
     public function testValue()
     {
         $this->renderer->setValue(3);
-        $this->assertContains('<span class="modifier_value">3</span>', $this->renderer->render()->__toString());
+        $this->assertContains('<span class="modifier-value">3</span>', $this->renderer->render()->__toString());
     }
 }
