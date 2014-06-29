@@ -15,6 +15,8 @@ class CharacterClass extends \Eloquent
 {
     protected $table = 'classes';
 
-    /** @var bool */
-    public $favored = false;
+    public function specifics()
+    {
+        return $this->hasMany('CharacterClassSpecifics');
+    }
 }
