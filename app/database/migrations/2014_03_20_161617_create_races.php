@@ -16,7 +16,7 @@ class CreateRaces extends Migration {
 		{
 			$table->increments('race_id');
             $table->string('name')->unique();
-            $table->string('description');
+            $table->text('description');
 			$table->string('size');
 			$table->smallInteger('speed');
             $table->string('attribute_modifiers')->nullable();

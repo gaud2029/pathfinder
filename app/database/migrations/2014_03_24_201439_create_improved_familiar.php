@@ -15,7 +15,7 @@ class CreateImprovedFamiliar extends Migration {
 		Schema::create('improved_familiar', function(Blueprint $table) {
 			$table->string('familiar');
 			$table->string('alignment');
-			$table->integer('caster_level');
+			$table->string('caster_level');
 			$table->string('notes')->nullable();
 		});
 

@@ -17,7 +17,7 @@ class CreateClasses extends Migration {
 			$table->increments('class_id');
             $table->string('name');
             $table->string('description');
-            $table->string('role');
+            $table->text('role');
             $table->string('alignment_requirements')->nullable();
             $table->integer('hit_die');
             $table->integer('skill_ranks_per_level');
